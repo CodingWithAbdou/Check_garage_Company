@@ -1,0 +1,12 @@
+Options -MultiViews
+RewriteEngine On
+
+# Remove file extension from URLs
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^/]+)$ $1.html [L]
+
+# Redirect to the language subfolder
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([a-z]{2})$ $1/ [R=301,L]
