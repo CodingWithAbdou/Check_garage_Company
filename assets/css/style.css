@@ -10,7 +10,7 @@
 :root {
     --white : #fff;
     --base :  #D6DE27;
-    --base-2 :  #cbd23b;
+    --base-2 :  #d4dc27;
     --black :  #000000;
     /* --r : #e91e63; */
     --seconde : #C1B799;
@@ -72,7 +72,7 @@ body {
 
 main { padding-block: 4rem;}
 
-section {
+section  {
     padding-block: 6rem
 }
 
@@ -234,16 +234,18 @@ nav .container {
 .btn-app {
     margin-top: 1rem;
     padding: .5rem 1.4rem;
-    background: #2b2c3a;
-    color: var(--white);
-    border-radius: 4px;
+    background: var(--white);
+    border: 1px solid #eee;
+    border-radius: 8px;
+    transition: .3s;
 }
 .btn-app:hover {
-    background: #343647;
+    margin-top: -5px;
+    box-shadow:  0 0 4px #d7d7d7;
 }
 
 .btn-app > div span {
-    color: var(--white);
+    color: var(--black);
     
 }
 
@@ -311,8 +313,13 @@ nav .container {
 .box {
     cursor: pointer;
 }
-.icon {
+.box .icon {
     padding-inline:  2rem ;
+}
+@media (max-width:768px) {
+    .icon {
+        display:  none  ;
+    }
 }
 .icon  i {
     display: flex;
@@ -336,11 +343,7 @@ nav .container {
     color: var(--white);
 }
 
-/*
-****
-* Services
-****
-*/
+
 
 /*
 ****
@@ -351,9 +354,47 @@ nav .container {
 
 /*
 ****
-* Footer
+* footer
 ****
 */
+
+footer {
+    padding-block: 6rem 2rem;
+    background: #242424;
+    margin-top: 30rem;
+}
+.footer-box {
+    background: var(--base-2);
+    border-radius: 20px;
+    padding: 3rem;
+    margin-top: -30rem;
+    /* text-align: center; */
+}
+.footer-box h2 {
+    font-size: 48px;
+}
+
+.icon_footer {
+    color: var(--white);
+}
+.icon_footer:hover {
+    color: var(--base);
+} 
+.min-title {
+    margin-top: 3rem;
+    padding-block: 3rem;
+}
+.footer ul a:hover {
+    color: var(--base) !important;
+}
+.end-footer {
+    padding-block : 4rem 2rem;
+    border-top: 1px solid var(--white);
+}
+.year {
+    color: var(--base);
+}
+
 
 
 /*
