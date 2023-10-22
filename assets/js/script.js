@@ -8,13 +8,16 @@ window.addEventListener("load",  () => {
 });
 
 
-// GET YEAR 
+// // GET YEAR 
 
 let currentDate = new Date().getFullYear();
 
-const date = document.querySelector("footer .date");
+const date = document.querySelector("footer .year");
 
 date.innerText = currentDate;
+
+
+
 
 
 

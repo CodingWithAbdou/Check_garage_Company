@@ -76,7 +76,10 @@ section  {
     padding-block: 6rem
 }
 
-li { list-style: none; }
+li {
+    margin-inline-start: 2rem;
+}
+/* .conditions-inner ol  {list-style-type: upper-roman ;} */
 
 a {
     color: inherit;
@@ -203,12 +206,18 @@ button { cursor: pointer; }
 ****
 */
 .logo { width: 45%; }
+.logo-nav {
+    position: absolute;
+    top: -125px;
+    right: -25px;
+}
+
 .header a:not(:last-child) { color: var(--black);}
 .header nav a:hover {color: var(--white)}
 
 nav .container {
     box-shadow: rgb(198 210 25 / 20%) 0px 2px 4px 0px;
-    padding: 1rem;
+    padding: 2rem;
     padding-inline-start: 2rem;
     border-radius: 4px;
 }
@@ -240,7 +249,7 @@ nav .container {
     transition: .3s;
 }
 .btn-app:hover {
-    margin-top: -5px;
+    transform: translateY(-5px);
     box-shadow:  0 0 4px #d7d7d7;
 }
 
@@ -310,7 +319,7 @@ nav .container {
     color: var(--base);
 }
 
-.box {
+.pointer {
     cursor: pointer;
 }
 .box .icon {
@@ -350,6 +359,16 @@ nav .container {
 * Clients
 ****
 */
+
+/* .conditions-pre {
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+} */
+.conditions-pre {
+    background:var(--base-2);
+    color: var(--white);
+}
 
 
 /*
@@ -441,3 +460,33 @@ footer {
 */
 
 
+/*collpse and set the height of the toggle text*/
+
+.pa-toggle-text .et_pb_text_inner {
+	max-height: 200px;
+	transition: max-height 0.3s ease-out;
+	overflow: hidden;
+}
+
+
+/*add gradient to the collapsed text*/
+
+.pa-toggle-text .et_pb_text_inner:after {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	pointer-events: none;
+	height: 100px;
+	width: 100%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: linear-gradient(0deg, #fff 10%, transparent);
+}
+
+
+@media (min-width:768px) {
+    .width-50 {
+        width: 50%;
+    }
+}
