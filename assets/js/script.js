@@ -23,5 +23,7 @@ date.innerText = currentDate;
 
 // init Aos 
     AOS.init({
-        duration: 800
+        duration: 1000 ,
+        startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+
     });

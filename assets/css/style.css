@@ -26,13 +26,13 @@
 .whatapp {
     position: fixed;
     bottom: 20px;
-    width: 64px;
-    height: 64px;
+    width: 48px;
+    height: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
     background: #25D366;
-    border-radius: 50%;
+    border-radius: 20px;
     cursor: pointer;
     z-index: 99;
     transition: var(--transition-1);
@@ -68,6 +68,7 @@ body {
     background-color: var(--white);
     font-size: 1.6rem;
     line-height: 1.7;
+    overflow-x: hidden;
 }
 
 main { padding-block: 4rem;}
@@ -148,6 +149,33 @@ button { cursor: pointer; }
     height: 300px;
     border-radius: 50%;
 }
+
+.shape.ar {
+    top: -470px;
+    right: 54%;
+    border-bottom-right-radius: 200px;
+    transform: rotate(28deg) translate(50%, -50%);
+    background: linear-gradient(115deg, rgb(250, 255, 96) 0%, rgba(214,222,39,1) 100%);
+}
+.shape.ar  > .circle {
+    background: linear-gradient(77deg, rgba(244,255,0, .2) 0%, rgba(255,255,255, 0.1) 100%);
+    bottom: 150px;
+    right: -100px;
+}
+
+.shape.en {
+    top: -470px;
+    left: 54%;
+    background: linear-gradient(45deg, rgba(214,222,39,1) 0%, rgb(250, 255, 96) 100%);
+    border-bottom-left-radius: 200px;
+    transform: rotate(-28deg) translate(-50%, -50%);
+}
+.shape.en  > .circle {
+    background: linear-gradient(77deg, rgba(244,255,0, .2) 0%, rgba(255,255,255, 0.1) 100%);
+    bottom: 150px;
+    left: -100px;
+}
+
 
 
 .header {
