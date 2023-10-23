@@ -3,8 +3,8 @@
 const preloader = document.querySelector("[data-preloader]");
 
 window.addEventListener("load", () => {
-  preloader.classList.add("loaded");
-  document.body.classList.add("loaded");
+    preloader.classList.add("loaded");
+    document.body.classList.add("loaded");
 });
 
 // // GET YEAR
@@ -17,6 +17,8 @@ date.innerText = currentDate;
 
 // init Aos
 AOS.init({
-  duration: 1000,
-  startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
+    duration: 1000,
+    startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
+    offset: 80, // offset (in px) from the original trigger point
+    once: true, // whether animation should happen only once - while scrolling down
 });
